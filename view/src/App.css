@@ -111,9 +111,14 @@ h6 {
   font-size: 1.5rem;
   color: var(--primaryColor);
 }
+.mainLogo {
+  height: 30px;
+  width: 130px;
+  object-fit: cover;
+}
 .nav-links {
-  height: 0;
-  overflow: hidden;
+  /* height: 0;
+  overflow: hidden; */
   transition: var(--mainTransition);
   list-style-type: none;
 }
