@@ -18,9 +18,26 @@ class Navbar extends Component {
         <div className="nav-center">
           <div className="nav-header">
             <Link to="/">
-              <img className='mainLogo' src={logo} alt="logo alt" />
+              <img className="mainLogo" src={logo} alt="logo alt" />
             </Link>
+            <button
+              type="button"
+              className="nav-btn"
+              onClick={this.handleToggle}
+            >
+              <FaAlignRight className="nav-icon" />
+            </button>
           </div>
+          <ul
+            className={this.state.isOpen ? "nav-links show-nav" : "nav-links"}
+          >
+            <li>
+              <Link to="/">Home</Link>
+            </li>
+            <li>
+              <Link to="/rooms">Rooms</Link>
+            </li>
+          </ul>
         </div>
       </nav>
     );
