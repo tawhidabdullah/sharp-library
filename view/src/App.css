@@ -170,8 +170,8 @@ h6 {
   justify-content: center;
 }
 .roomsHero {
-  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3))
-   , url("./images/adult-books-bookshelves-1329550.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("./images/adult-books-bookshelves-1329550.jpg");
   min-height: 60vh;
 }
 /* End of Hero */
@@ -239,7 +239,7 @@ h6 {
   padding: 5rem 0;
 }
 .services {
-  background: var(--darkGrey);
+  background: whitesmoke;
   text-align: center;
 }
 .services-center {
@@ -257,6 +257,7 @@ h6 {
   margin-bottom: 1.5rem;
 }
 .services h6 {
+  text-transform: capitalize;
   letter-spacing: var(--mainSpacing);
 }
 .services p {
