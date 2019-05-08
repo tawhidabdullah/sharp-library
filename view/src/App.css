@@ -19,8 +19,8 @@
 body {
   padding-top: 66px;
   color: var(--mainBlack);
-  background: var(--mainWhite);
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background: #f1f3f6;
+  font-family: Roboto, Arial, sans-serif;
   line-height: 1.4;
 }
 h1 {
@@ -448,10 +448,13 @@ h6 {
 
 .booksContainer {
   display: flex;
+  background: #f1f3f6;
+  padding: 8px;
 }
 
 .roomslist {
   padding: 5rem 0;
+  background: white;
 }
 .roomslist-center {
   width: 100%;
@@ -482,24 +485,39 @@ h6 {
 /* end of roomlist */
 /*  rooms fitler*/
 .filter-container {
-  padding: 5rem 0;
   min-width: 250px;
+  /* background: whitesmoke;  */
+  margin: 0 10px 0 4px;
+  background: white;
+}
+
+.filterSpan{
+  font-size: 18px;
+  font-weight: 500px;
+  letter-spacing: .3px;
+  padding: 16px;
+  border-bottom: 1px solid #f0f0f0; 
 }
 .filter-form {
   width: 80%;
   margin: 0 auto;
+  margin-top: 20px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(202px, 1fr));
   grid-row-gap: 2rem;
   grid-column-gap: 40px;
 }
+
 .form-group {
   text-transform: capitalize;
 }
 .form-group label {
   display: block;
-  letter-spacing: var(--mainSpacing);
-  margin-bottom: 0.5rem;
+  font-size: 13px;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: .3px;
+  margin-bottom: 0.3rem;
 }
 .form-control {
   width: 100%;
@@ -518,7 +536,8 @@ h6 {
 }
 .single-extra label {
   display: inline-block;
-  font-size: 0.8rem;
+  color: #212121;
+  font-size: 12px;
   margin-left: 0.5rem;
 }
 @media screen and (min-width: 776px) {
@@ -537,13 +556,13 @@ input[type="range"] {
   -webkit-appearance: none;
   width: 200px;
   height: 6px;
-  background: #333;
-  border-radius: 1px soild #333;
+  background: #2874f0;
+  border-radius: 1px soild #2874f0;
   background-position: center;
   background-repeat: no-repeat;
   border-radius: 0.25rem;
 }
-input[type="range"]:focus{
+input[type="range"]:focus {
   outline: none;
 }
 

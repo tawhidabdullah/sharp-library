@@ -20,6 +20,7 @@ const RoomsFilter = ({ rooms }) => {
     minPrice,
     handleChange,
     type,
+    pets,
     capacity,
     maxPrice,
     minSize,
@@ -50,6 +51,9 @@ const RoomsFilter = ({ rooms }) => {
 
   return (
     <section className="filter-container">
+      <div className="filterSpan">
+        <span>Filters</span>
+      </div>
       <form className="filter-form">
         {/* selectType */}
         <div className="form-group">
@@ -81,7 +85,7 @@ const RoomsFilter = ({ rooms }) => {
         {/* End of quests */}
         {/* room price */}
         <div className="form-group">
-          <label htmlFor="price">book price ${price}</label>
+          <label htmlFor="price">book price &rarr; ${price}</label>
           <input
             type="range"
             name="price"
@@ -94,6 +98,31 @@ const RoomsFilter = ({ rooms }) => {
           />
         </div>
         {/* end of room price */}
+        {/* extras */}
+        <div className="form-group">
+        <label >Extras</label>
+          <div className="single-extra">
+            <input
+              type="checkbox"
+              name="breakfast"
+              id="breakfast"
+              checked={breakfast}
+              onChange={handleChange}
+            />
+            <label htmlFor="breakfast"> breakfast</label>
+          </div>
+          <div className="single-extra">
+            <input
+              type="checkbox"
+              name="pets"
+              id="pets"
+              checked={pets}
+              onChange={handleChange}
+            />
+            <label htmlFor="pets"> pets</label>
+          </div>
+        </div>
+        {/* end of extras */}
       </form>
     </section>
   );

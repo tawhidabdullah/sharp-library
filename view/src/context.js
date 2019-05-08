@@ -117,6 +117,14 @@ class RoomProvider extends Component {
     // filter by price
     tempRooms = tempRooms.filter(room => room.price <= price);
 
+    // filter by breakfast
+    if (breakfast) {
+      tempRooms = tempRooms.filter(room => room.breakfast === true);
+    }
+    // filter by pets
+    if (pets) {
+      tempRooms = tempRooms.filter(room => room.pets === true);
+    }
     this.setState({
       sortedRooms: tempRooms
     });
