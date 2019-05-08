@@ -58,16 +58,18 @@ h6 {
   text-decoration: none;
   letter-spacing: var(--mainSpacing);
   color: var(--mainBlack);
-  background: var(--primaryColor);
+
   padding: 0.4rem 0.9rem;
   border: 3px solid var(--primaryColor);
   transition: var(--mainTransition);
   text-transform: uppercase;
+  background: transparent;
   cursor: pointer;
+  color: var(--primaryColor);
 }
 .btn-primary:hover {
-  background: transparent;
-  color: var(--primaryColor);
+  background: var(--primaryColor);
+  color: #333;
 }
 .loading {
   text-transform: capitalize;
@@ -530,4 +532,31 @@ h6 {
     max-width: 80%;
   }
 }
+
+input[type="range"] {
+  -webkit-appearance: none;
+  width: 200px;
+  height: 6px;
+  background: #333;
+  border-radius: 1px soild #333;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 0.25rem;
+}
+input[type="range"]:focus{
+  outline: none;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  background: whitesmoke;
+  position: relative;
+  border: 3px solid aquamarine;
+  z-index: 3;
+  cursor: pointer;
+}
+
 /* end of rooms fitler*/

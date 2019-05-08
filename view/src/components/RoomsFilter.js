@@ -38,6 +38,16 @@ const RoomsFilter = ({ rooms }) => {
       </option>
     );
   });
+
+  let people = getUniqueBookTypes(rooms, "capacity");
+  people = people.map((person, index) => {
+    return (
+      <option value={person} key={index}>
+        {person}
+      </option>
+    );
+  });
+
   return (
     <section className="filter-container">
       <form className="filter-form">
@@ -55,6 +65,35 @@ const RoomsFilter = ({ rooms }) => {
           </select>
         </div>
         {/* End of selectType */}
+        {/* quests */}
+        <div className="form-group">
+          <label htmlFor="capacity">Guests</label>
+          <select
+            className="form-control"
+            name="capacity"
+            id="capacity"
+            value={capacity}
+            onChange={handleChange}
+          >
+            {people}
+          </select>
+        </div>
+        {/* End of quests */}
+        {/* room price */}
+        <div className="form-group">
+          <label htmlFor="price">book price ${price}</label>
+          <input
+            type="range"
+            name="price"
+            min={minPrice}
+            max={maxPrice}
+            id="price"
+            value={price}
+            onChange={handleChange}
+            className="form-control slider"
+          />
+        </div>
+        {/* end of room price */}
       </form>
     </section>
   );
