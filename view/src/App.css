@@ -484,7 +484,7 @@ h6 {
   min-width: 250px;
 }
 .filter-form {
-  width: 60vw;
+  width: 80%;
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(202px, 1fr));
@@ -521,13 +521,13 @@ h6 {
 }
 @media screen and (min-width: 776px) {
   .filter-form {
-    width: 70vw;
+    width: 80%;
   }
 }
 @media screen and (min-width: 992px) {
   .filter-form {
-    width: 95vw;
-    max-width: 1170px;
+    width: 80%;
+    max-width: 80%;
   }
 }
 /* end of rooms fitler*/
