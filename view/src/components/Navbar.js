@@ -5,8 +5,17 @@ import { Link } from "react-router-dom";
 
 class Navbar extends Component {
   state = {
-    isOpen: false
+    isOpen: false,
+    isInUserDropDownClick: false
   };
+
+  toggleUserDropDown = () => {
+    let isInUserDropDownClick = this.state.isInUserDropDownClick;
+    this.setState({
+      isInUserDropDownClick: !isInUserDropDownClick
+    });
+  };
+
   handleToggle = () => {
     this.setState({
       isOpen: !this.state.isOpen
@@ -27,6 +36,7 @@ class Navbar extends Component {
             >
               <FaAlignRight className="nav-icon" />
             </button>
+            
           </div>
           <ul
             className={this.state.isOpen ? "nav-links show-nav" : "nav-links"}
@@ -36,6 +46,34 @@ class Navbar extends Component {
             </li>
             <li>
               <Link to="/rooms">Books</Link>
+            </li>
+            <li>
+              <div className="User-area" onClick={this.toggleUserDropDown}>
+                <div className="User-avtar">
+                  <img src="http://f1s.000webhostapp.com/images/avatar/avatar5.png" />
+                </div>
+                <ul
+                  className={
+                    this.state.isInUserDropDownClick
+                      ? "User-Dropdown U-open"
+                      : "User-Dropdown"
+                  }
+                >
+                  <li>
+                    <a href="#">My Profile</a>
+                  </li>
+                  <li>
+                    <a href="#">Notifications</a>
+                  </li>
+
+                  <li>
+                    <a href="#">Settings</a>
+                  </li>
+                  <li>
+                    <a href="#">Logout</a>
+                  </li>
+                </ul>
+              </div>
             </li>
           </ul>
         </div>

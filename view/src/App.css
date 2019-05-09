@@ -102,7 +102,9 @@ h6 {
 .nav-header {
   display: flex;
   justify-content: space-between;
+  margin-right: auto;
 }
+
 .nav-btn {
   background: transparent;
   border: none;
@@ -119,24 +121,100 @@ h6 {
   object-fit: cover;
 }
 .nav-links {
-  height: 0;
   overflow: hidden;
+  height: 0;
   transition: var(--mainTransition);
   list-style-type: none;
 }
 .nav-links a {
   display: block;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   text-decoration: none;
   padding: 1rem 0;
   color: var(--mainBlack);
   transition: var(--mainTransition);
   text-align: center;
   font-size: 1rem;
-  font-weight: 600;
-  letter-spacing: var(--mainSpacing);
+  font-weight: 500;
+  /* letter-spacing: var(--mainSpacing); */
 }
 .nav-links a:hover {
-  color: var(--primaryColor);
+  color: rgb(68, 240, 240);
+}
+
+.User-area {
+  width: 32px;
+  height: 32px;
+  position: relative;
+  cursor: pointer;
+  /* margin-left: 300px; */
+  z-index: 5353;
+}
+.User-area > .User-avtar {
+  width: 100%;
+  height: 100%;
+}
+.User-area > .User-avtar > img {
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+}
+
+.User-Dropdown {
+  display: none;
+  position: absolute;
+  border-radius: 7px;
+  background: #fff;
+  box-shadow: 3px 3px 8px rgba(214, 214, 214, 0.78);
+  list-style: none;
+  padding: 0 20px;
+  width: 230px;
+  margin: 0;
+  top: 56px;
+  right: -103px;
+}
+.User-Dropdown:before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  margin-left: -0.5em;
+  right: 80px;
+  box-sizing: border-box;
+  border: 11px solid black;
+  border-color: transparent transparent #ffffff #ffffff;
+  transform-origin: 0 0;
+  transform: rotate(135deg);
+  box-shadow: -3px 3px 2px -3px rgba(214, 214, 214, 0.78);
+}
+.User-Dropdown.U-open {
+  display: block;
+}
+.User-Dropdown > li {
+  padding: 0px;
+  line-height: 47px;
+  border-bottom: 1px solid rgba(172, 166, 166, 0.16);
+}
+.User-Dropdown > li:last-child {
+  border-bottom: 0px;
+}
+.User-Dropdown > li > a {
+  font-size: 13px;
+  padding: 10px 25px 10px 10px;
+  text-decoration: none;
+  color: #333;
+  transition: all 0.2s ease-out;
+}
+.User-Dropdown > li > a:hover {
+  color: #333;
+}
+.User-Dropdown span {
+  background: #16d67a;
+  padding: 3px 10px;
+  color: #fff;
+  border-radius: 30px;
+  font-size: 13px;
 }
 
 .show-nav {
@@ -155,6 +233,7 @@ h6 {
     height: auto;
     display: flex;
     margin-left: 4rem;
+    overflow: hidden;
   }
   .nav-links a {
     margin: 0 1rem;
@@ -419,41 +498,6 @@ h6 {
   }
 }
 
-/* @media screen and (max-width: 445px) {
-  .getalife {
-    min-height: 47vh;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-  }
-
-  .getalife .banner-content {
-    position: absolute;
-    top: 25%;
-    left: 5%;
-  }
-
-  .banner-content h2 {
-    font-size: 17px;
-  }
-
-  .banner-content h6 {
-    margin-top: -10px;
-    font-size: 11px;
-  }
-
-  .getalife img {
-    max-height: 150px;
-    margin-left: 230px;
-  }
-
-  .banner-button {
-    width: 80px;
-    height: 24px;
-    font-size: 13px;
-  }
-} */
-
 @media screen and (max-width: 445px) {
   .getalife {
     min-height: 50vh;
@@ -490,7 +534,7 @@ h6 {
 }
 
 @media screen and (max-width: 351px) {
-.getalife .banner-content {
+  .getalife .banner-content {
     position: absolute;
     top: 28%;
     left: 5%;
@@ -507,32 +551,27 @@ h6 {
   }
 }
 
-
 @media screen and (max-width: 307px) {
   .getalife .banner-content {
-      position: absolute;
-      top: 28%;
-      left: 5%;
-    }
-
-    .banner-content h2 {
-      font-size: 14px;
-    }
-  
-    .banner-content h6 {
-      margin-top: -10px;
-      font-size: 9px;
-    }
-  
-    .getalife img {
-      max-height: 120px;
-      margin-left: 185px;
-    }
-   
-
-  
+    position: absolute;
+    top: 28%;
+    left: 5%;
   }
 
+  .banner-content h2 {
+    font-size: 14px;
+  }
+
+  .banner-content h6 {
+    margin-top: -10px;
+    font-size: 9px;
+  }
+
+  .getalife img {
+    max-height: 120px;
+    margin-left: 185px;
+  }
+}
 
 /* End of Banner */
 /* Title */
