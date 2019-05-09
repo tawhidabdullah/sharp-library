@@ -415,13 +415,13 @@ h6 {
     margin-left: 270px;
   }
   .getalife {
-    min-height: 50vh;
+    min-height: 60vh;
   }
 }
 
-@media screen and (max-width: 445px) {
+/* @media screen and (max-width: 445px) {
   .getalife {
-    min-height: 35vh;
+    min-height: 47vh;
     align-items: center;
     justify-content: center;
     flex-direction: column;
@@ -452,11 +452,11 @@ h6 {
     height: 24px;
     font-size: 13px;
   }
-}
+} */
 
 @media screen and (max-width: 445px) {
   .getalife {
-    min-height: 30vh;
+    min-height: 50vh;
     align-items: center;
     justify-content: center;
     flex-direction: column;
@@ -464,12 +464,12 @@ h6 {
 
   .getalife .banner-content {
     position: absolute;
-    top: 21%;
+    top: 31%;
     left: 5%;
   }
 
   .banner-content h2 {
-    font-size: 14px;
+    font-size: 16px;
   }
 
   .banner-content h6 {
@@ -478,16 +478,62 @@ h6 {
   }
 
   .getalife img {
-    max-height: 110px;
+    max-height: 150px;
     margin-left: 200px;
   }
 
   .banner-button {
-    width: 70px;
-    height: 21px;
+    width: 80px;
+    height: 26px;
     font-size: 9px;
   }
 }
+
+@media screen and (max-width: 351px) {
+.getalife .banner-content {
+    position: absolute;
+    top: 28%;
+    left: 5%;
+  }
+  .getalife img {
+    max-height: 130px;
+    margin-left: 185px;
+  }
+
+  .banner-button {
+    width: 75px;
+    height: 22px;
+    font-size: 7px;
+  }
+}
+
+
+@media screen and (max-width: 307px) {
+  .getalife .banner-content {
+      position: absolute;
+      top: 28%;
+      left: 5%;
+    }
+
+    .banner-content h2 {
+      font-size: 14px;
+    }
+  
+    .banner-content h6 {
+      margin-top: -10px;
+      font-size: 9px;
+    }
+  
+    .getalife img {
+      max-height: 120px;
+      margin-left: 185px;
+    }
+   
+
+  
+  }
+
+
 /* End of Banner */
 /* Title */
 .section-title {
@@ -510,7 +556,8 @@ h6 {
 
 /* services */
 .services {
-  padding: 5rem 0;
+  margin-top: -140px;
+  padding: 10rem 0;
 }
 .services {
   background: whitesmoke;
