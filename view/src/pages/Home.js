@@ -1,22 +1,23 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import bannerimg from "../images/schoolbooks-colour-1200px.png";
 
-import Hero from "../components/Hero";
-import Banner from "../components/Banner";
 import Services from "../components/Services";
 import FeaturedRooms from "../components/FeaturedRooms";
 const Home = () => {
   return (
     <>
-      <Hero hero="defaultHero">
-        {" "}
-        <Banner title="the best libarary" subtitle="03% off going on here">
-          <Link to="/rooms" className="btn-primary">
-            {" "}
-            Our books
-          </Link>
-        </Banner>
-      </Hero>
+      <div className="getalife">
+        <div>
+          <img src={bannerimg} alt="get a life" />{" "}
+        </div>
+        <div className="banner-content">
+          <h2>The Sharp Library</h2>
+          <h6>Stay connected with us, and we will make history</h6>
+          <button className="banner-button">See Books</button>
+        </div>
+      </div>
+
       <Services />
       <FeaturedRooms />
     </>
