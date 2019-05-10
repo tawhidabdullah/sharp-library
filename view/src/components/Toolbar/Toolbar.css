@@ -13,17 +13,20 @@
   padding: 0 1rem;
 }
 
-.toolbar__logo a {
-  color: white;
-  text-decoration: none;
-  font-size: 1.5rem;
-}
-.toolbar__logo  {
- margin-left: 1rem; 
+.toolbar__logo {
+  margin-left: 1rem;
 }
 
-.spacer{
-    flex: 1;
+.toolbar__logo img {
+  height: 40px;
+  width: 40px;
+  border-radius: 100%;
+  background:#2f78ee;
+  margin-top: 8px;
+ 
+}
+.spacer {
+  flex: 1;
 }
 
 .toolbar__navigation-items ul {
@@ -47,17 +50,14 @@
   color: #042a68;
 }
 
-
-@media(max-width: 768px){
+@media (max-width: 768px) {
   .toolbar__navigation-items {
-    display: none; 
+    display: none;
   }
 }
 
-
-
-@media(min-width: 769px){
- .toolbar-toggle-button{
-   display: none; 
- }
+@media (min-width: 769px) {
+  .toolbar-toggle-button {
+    display: none;
+  }
 }

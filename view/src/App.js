@@ -25,11 +25,11 @@ class App extends Component {
     });
   };
 
-  backdropClickHandler = () =>{
+  backdropClickHandler = () => {
     this.setState({
       sideDrawerOpen: false
-    })
-  }; 
+    });
+  };
 
   render() {
     let sideDrawerAndBackDrop = "";
@@ -37,7 +37,7 @@ class App extends Component {
     if (this.state.sideDrawerOpen) {
       sideDrawerAndBackDrop = (
         <>
-          <SideDrawer />
+          <SideDrawer show={this.state.sideDrawerOpen} />
           <BackDrop click={this.backdropClickHandler} />
         </>
       );
