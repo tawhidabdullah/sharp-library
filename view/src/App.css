@@ -16,12 +16,18 @@
   --darkShadow: 4px 10px 5px 0px rgba(0, 0, 0, 0.5);
 }
 /* globals */
+
+html{
+  height: 100%;
+}
+
+
 body {
-  padding-top: 66px;
   color: var(--mainBlack);
   background: #f1f3f6;
   font-family: Roboto, Arial, sans-serif;
   line-height: 1.4;
+  height: 100%; 
 }
 h1 {
   font-size: 3em;
@@ -90,7 +96,7 @@ h6 {
 }
 /* end of globals */
 /* Navbar */
-.navbar {
+/* .navbar {
   position: fixed;
   top: 0;
   left: 0;
@@ -138,7 +144,7 @@ h6 {
   font-size: 1rem;
   font-weight: 500;
   /* letter-spacing: var(--mainSpacing); */
-}
+/* 
 .nav-links a:hover {
   color: rgb(68, 240, 240);
 }
@@ -149,9 +155,9 @@ h6 {
   position: relative;
   cursor: pointer;
   /* margin-left: 300px; */
-  z-index: 5353;
-}
-.User-area > .User-avtar {
+/* z-index: 5353;
+} */
+/* .User-area > .User-avtar {
   width: 100%;
   height: 100%;
 }
@@ -219,8 +225,8 @@ h6 {
 
 .show-nav {
   height: 100px;
-}
-@media screen and (min-width: 768px) {
+} */
+/* @media screen and (min-width: 768px) {
   .nav-btn {
     display: none;
   }
@@ -238,11 +244,12 @@ h6 {
   .nav-links a {
     margin: 0 1rem;
     padding: 0.5rem 0;
-  }
-}
+  } 
+}  */
 /* end of navbar */
 /* Hero */
 .getalife {
+padding-top: 50px;
   position: relative;
   -webkit-clip-path: polygon(50% 0%, 100% 0, 100% 78%, 64% 100%, 0 94%, 0 1%);
   clip-path: polygon(50% 0%, 100% 0, 100% 78%, 64% 100%, 0 94%, 0 1%);

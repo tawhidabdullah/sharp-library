@@ -100,7 +100,7 @@ const RoomsFilter = ({ rooms }) => {
         {/* end of room price */}
         {/* extras */}
         <div className="form-group">
-        <label >Extras</label>
+          <label>Extras</label>
           <div className="single-extra">
             <input
               type="checkbox"

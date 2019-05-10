@@ -1,0 +1,42 @@
+.side-drawer {
+  height: 100%;
+  background: white;
+  box-shadow: 1px 0px 7px rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 70%;
+  max-width: 400px;
+  z-index: 600;
+  transition: 1s;
+}
+
+.side-drawer ul {
+  list-style: none;
+  display: flex;
+  height: 100%;
+
+  flex-direction: column;
+  justify-content: center;
+}
+
+.side-drawer li {
+  padding: 0.4rem 0;
+}
+
+.side-drawer a {
+  color: #333;
+  text-decoration: none;
+  font-size: 1.3rem;
+}
+
+.side-drawer a:hover,
+.side-drawer a:active {
+  color: rgb(76, 114, 238);
+}
+
+@media (min-width: 769px) {
+  .side-drawer {
+    display: none;
+  }
+}
