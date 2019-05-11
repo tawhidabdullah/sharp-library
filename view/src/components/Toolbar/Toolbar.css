@@ -36,18 +36,22 @@
   margin: 0;
   padding: 0;
   display: flex;
-  align-items: center; 
+  align-items: center;
+}
+.toolbar__navigation-items ul:last-child {
+  margin: 0 60px 0 0;
 }
 
 .toolbar__navigation-items li {
   padding: 0 0.5rem;
 }
 
-
-
 .toolbar__navigation-items a {
   color: white;
   text-decoration: none;
+  font-weight: 500;
+  letter-spacing: 0.1px;
+  font-size: 16px;
 }
 
 .toolbar__navigation-items a:hover,
@@ -68,7 +72,6 @@
 }
 
 .header__avatar {
-  margin: 0 60px 0 0;
   width: 35px;
   height: 35px;
   cursor: pointer;

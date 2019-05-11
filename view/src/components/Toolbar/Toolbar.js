@@ -1,10 +1,10 @@
 import React, { Component } from "react";
-
 import { Link, NavLink } from "react-router-dom";
 import { connect } from "react-redux";
 import { logoutUser } from "../../actions/authAction";
 import DrawerToggleButton from "../SideDrawer/DrawerToggleButton";
 import logo from "../../images/book-icon.png";
+import { FaShoppingCart } from "react-icons/fa";
 
 // import CSS
 import "./Toolbar.css";
@@ -44,46 +44,46 @@ class Toolbar extends Component {
         </li>
 
         <li>
-         <a href='#'>
-         <div className="header__avatar" onClick={this.toggleDrodown}>
-            <div className="user-account">
-              <img
-                className="header__avatar-img"
-                src={user.avatar}
-                title="you must have a Gravatar connect to your email for displaying image"
-              />
-              <div
-                className={`dropdownx ${
-                  this.state.dropdownToggle ? "dropdown--active" : "deactive"
-                }`}
-              >
-                <div className="dropdown__list">
-                  <a className="dropdown__list-item">
-                    <span className="dropdown__icon">
-                      <i className="fa fa-user" />
-                    </span>
-                    <span className="dropdown__title">my profile</span>
-                  </a>
-                  <a className="dropdown__list-item">
-                    <span className="dropdown__icon">
-                      <i className="fa fa-clipboard" />
-                    </span>
-                    <span className="dropdown__title">my account</span>
-                  </a>
-                  <a
-                    className="dropdown__list-item"
-                    onClick={this.onLogoutClick}
-                  >
-                    <span className="dropdown__icon">
-                      <i className="fa fa-sign-out" />
-                    </span>
-                    <span className="dropdown__title">log out</span>
-                  </a>
+          <a href="#">
+            <div className="header__avatar" onClick={this.toggleDrodown}>
+              <div className="user-account">
+                <img
+                  className="header__avatar-img"
+                  src={user.avatar}
+                  title="you must have a Gravatar connect to your email for displaying image"
+                />
+                <div
+                  className={`dropdownx ${
+                    this.state.dropdownToggle ? "dropdown--active" : "deactive"
+                  }`}
+                >
+                  <div className="dropdown__list">
+                    <a className="dropdown__list-item">
+                      <span className="dropdown__icon">
+                        <i className="fa fa-user" />
+                      </span>
+                      <span className="dropdown__title">my profile</span>
+                    </a>
+                    <a className="dropdown__list-item">
+                      <span className="dropdown__icon">
+                        <i className="fa fa-clipboard" />
+                      </span>
+                      <span className="dropdown__title">my account</span>
+                    </a>
+                    <a
+                      className="dropdown__list-item"
+                      onClick={this.onLogoutClick}
+                    >
+                      <span className="dropdown__icon">
+                        <i className="fa fa-sign-out" />
+                      </span>
+                      <span className="dropdown__title">log out</span>
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-         </a>
+          </a>
         </li>
       </React.Fragment>
     );
