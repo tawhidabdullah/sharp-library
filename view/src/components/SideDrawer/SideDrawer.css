@@ -31,17 +31,11 @@
   padding: 0.4rem 0;
 }
 
-a .sidedrawerIcon {
- 
-  marginright:;
-  font-size: "19px";
-  margin-top: "14px";
-}
-
 .side-drawer a {
   color: #414141;
   text-decoration: none;
-  font-size: 1.3rem;
+  font-size: 1rem;
+
 }
 
 .side-drawer a:hover,
