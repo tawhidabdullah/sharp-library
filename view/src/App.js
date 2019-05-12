@@ -20,6 +20,9 @@ import Toolbar from "./components/Toolbar/Toolbar";
 import SideDrawer from "./components/SideDrawer/SideDrawer";
 import BackDrop from "./components/BackDrop/BackDrop";
 
+// IMPORT DASHBOARD
+import Dashboard from "./components/Dashboard/Dashboard";
+
 // import CSS
 import "./App.css";
 // IMPORT PAGES
@@ -84,7 +87,9 @@ class App extends Component {
               <Route exact path="/login" component={Login} />
               <Route exact path="/rooms/" component={Rooms} />
               <Route exact path="/rooms/:slug" component={SingleRoom} />
-              <Route component={Error} />
+            </Switch>
+            <Switch>
+              <PrivateRoute exact path="/dashboard" component={Dashboard} />
             </Switch>
           </main>
         </div>

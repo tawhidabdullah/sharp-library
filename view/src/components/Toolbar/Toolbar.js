@@ -117,7 +117,7 @@ class Toolbar extends Component {
                 <a href="/">Books</a>
               </li>
               <li>
-                <a href="/">cars</a>
+                <a href="/">Cars</a>
               </li>
               {isAuthenticate ? logedInUserLinks : newUserLinks}{" "}
             </ul>
